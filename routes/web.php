@@ -6,8 +6,8 @@ use App\Http\Controllers\RegisterUserController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('test', function () {
-    return view('test');
+Route::get('login', function () {
+    return view('auth.login');
 });
 
-Route::get('register', [RegisterUserController::class, 'create']);
+Route::get('/register', [RegisterUserController::class, 'create']);
