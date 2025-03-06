@@ -8,7 +8,7 @@
                         <h3 class="text-center">Register</h3>
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
