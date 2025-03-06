@@ -13,6 +13,13 @@ class RegisterUserController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        request()->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email|unique:table,column,except,id',
+            'password' => 'required',
+            'password_confirmation' => 'required'
+        ]);
+        
     }
 }
