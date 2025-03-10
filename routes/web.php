@@ -16,6 +16,7 @@ Route::get('/register', [RegisterUserController::class, 'create'])->name('regist
 Route::post('/register', [RegisterUserController::class, 'store']);
 
 Route::post('/login', [SessionController::class, 'store'])->name('login');
-Route::get('/login', [SessionController::class, 'create'])->name('login');
+Route::get('/login', [SessionController::class, 'logUser'])->name('login');
+Route::get('/logout', [SessionController::class, 'destroy'])->name('logout');
 
 Route::get('/hero', [DashboardController::class, 'hero'])->name('hero');
