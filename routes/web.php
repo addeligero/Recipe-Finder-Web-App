@@ -19,4 +19,4 @@ Route::post('/login', [SessionController::class, 'store'])->name('login');
 Route::get('/login', [SessionController::class, 'logUser'])->name('login');
 Route::get('/logout', [SessionController::class, 'destroy'])->name('logout');
 
-Route::get('/hero', [DashboardController::class, 'hero'])->name('hero');
+Route::get('/hero', [DashboardController::class, 'hero'])->name('hero')->middleware('auth');
