@@ -14,8 +14,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: #f8f9fa;
+            margin-top: 50px;
             padding: 50px;
+        
         }
         .btn-custom {
             background-color: #dc3545;
@@ -52,7 +53,7 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
+        <div class="">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h1>Enjoy Your Healthy <br> Delicious Food</h1>
