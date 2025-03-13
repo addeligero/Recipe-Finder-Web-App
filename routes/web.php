@@ -11,12 +11,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
+    Route::post('/register', [RegisterUserController::class, 'store']);
+    Route::post('/login', [SessionController::class, 'store'])->name('login');
+    Route::get('/login', [SessionController::class, 'logUser'])->name('login');
+});
 
-Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
-Route::post('/register', [RegisterUserController::class, 'store']);
-
-Route::post('/login', [SessionController::class, 'store'])->name('login');
-Route::get('/login', [SessionController::class, 'logUser'])->name('login');
-Route::get('/logout', [SessionController::class, 'destroy'])->name('logout');
-
-Route::get('/hero', [DashboardController::class, 'hero'])->name('hero');
+Route::middleware('auth')->group(function () {
+    Route::get('/logout', [SessionController::class, 'destroy'])->name('logout');
+    Route::get('/hero', [DashboardController::class, 'hero'])->name('hero');
+});
