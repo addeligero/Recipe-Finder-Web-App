@@ -28,6 +28,7 @@
                                 </div>
                             @endif
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <a href="register" type="submit" class="btn btn-danger btn-block">Register</a>
                         </form>
                     </div>
                 </div>
