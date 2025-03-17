@@ -31,6 +31,7 @@
                                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
+                             <a href="login" type="submit" class="btn btn-success btn-block">Login</a>
                         </form>
                     </div>
                 </div>

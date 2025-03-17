@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class RegisterUserController extends Controller
 {
@@ -12,6 +13,7 @@ class RegisterUserController extends Controller
     {
         return view('auth.register');
     }
+  
 
     public function store()
     {
