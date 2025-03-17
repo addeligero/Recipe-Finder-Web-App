@@ -46,7 +46,7 @@
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <a href="#" class="btn btn-danger ms-3">Book a Table</a>
+                <a href="/logout" class="btn btn-danger ms-3" id="logoutButton">Logout</a>
             </div>
         </div>
     </nav>
@@ -69,7 +69,19 @@
             </div>
         </div>
     </section>
-    
-   
 </body>
+<script>
+    document.getElementById("logoutButton").addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        fetch('/logout', { method: 'GET', credentials: 'same-origin' })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url; // Redirect to home
+                    setTimeout(() => {
+                        location.reload(); // Reload page after logout
+                    }, 100); 
+                }
+            });
+    });
+</script>
 </x-layout>
