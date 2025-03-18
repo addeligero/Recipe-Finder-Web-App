@@ -13,7 +13,7 @@
     </style>
      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">My Dashboard</a>
+            <a class="navbar-brand font-weight-bold" href="#">RecipeRadar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,14 +27,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Enjoy Your Interactive Dashboard</h1>
-            <p>Experience smooth navigation and a modern interface.</p>
-            <a href="#welcome" class="btn btn-primary">Explore</a>
-        </div>
-    </section>
 
     <!-- Welcome Section -->
     <section id="welcome" class="welcome">
