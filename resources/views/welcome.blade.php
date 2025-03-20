@@ -35,9 +35,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#welcome">Welcome</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="registerBtn">Register</a></li>
+                   <!--future lists here-->
                 </ul>
             </div>
         </div>
@@ -49,8 +47,8 @@
             <h2 class="font-italic">Your Ultimate Recipe Explorer</h2>
             <img src="{{ asset('build/assets/img/1.jpg') }}" alt="Welcome Image">
             <p>RecipeRadar helps you discover delicious recipes with ease. Search, save, and cook your favorite meals with step-by-step guides and ingredient lists. Whether you're a beginner or a pro, find the perfect dish for any occasion!</p>
-            <a href="/login" class="btn btn-success" id="register">Register</a>
-            <a href="/register" class="btn btn-secondary" id="login">Login</a>
+            <a href="/register" class="btn btn-success" id="register">Register</a>
+            <a href="/login" class="btn btn-secondary" id="login">Login</a>
         </div>
         <br><br><br> <br>
         <hr>
