@@ -7,15 +7,17 @@ use App\Http\Controllers\DashboardController;
 
 ;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
     Route::post('/register', [RegisterUserController::class, 'store']);
     Route::post('/login', [SessionController::class, 'store'])->name('login');
     Route::get('/login', [SessionController::class, 'logUser'])->name('login');
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
 });
 
 Route::middleware('auth')->group(function () {
