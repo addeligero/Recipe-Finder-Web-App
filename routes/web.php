@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\authRestrictController;
+use App\Http\Controllers\AuthRestrictController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DashboardController;
 
-;
-
-Route::get('/', [authRestrictController::class, 'handle']);
+Route::get('/', [AuthRestrictController::class, 'handle'])->name(
+    'welcome'
+);
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
