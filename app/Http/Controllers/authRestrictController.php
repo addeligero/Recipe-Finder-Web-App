@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthRestrictController;
 
 class AuthRestrictController extends Controller
 {
@@ -10,7 +10,8 @@ class AuthRestrictController extends Controller
     {
         if (auth()->check()) {
             return redirect()->route('hero');
-            return redirect()->route('login');
         }
+
+        return view('welcome');
     }
 }
