@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="d-flex justify-content-center align-items-center vh-100 bg-light"
+    style="background: linear-gradient(135deg, #e0f7fa, #ffffff);">
         <div class="col-md-5 col-sm-8 col-10">
             <div class="card shadow border-0 rounded-4">
                 <div class="card-header text-white text-center" style="background: #008080;">
